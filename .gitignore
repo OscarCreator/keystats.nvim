@@ -1,0 +1,4 @@
+/target
+*.db
+lua/deps
+lua/*.so
