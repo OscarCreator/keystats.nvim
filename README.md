@@ -11,6 +11,9 @@ Do you know how many key presses you do every day?
 use {
     'OscarCreator/keystats.nvim',
     run = 'make',
+    config = function()
+        require("keystats").setup()
+    end
 }
 ```
 
@@ -18,3 +21,12 @@ use {
 
 **keystats.nvim** uses `vim.on_key()` to count and then save you key presses to
 a database.
+
+## Configuration
+
+```lua
+{
+    -- how often (in strokes) to save to database
+    save_count = 10,
+}
+```
